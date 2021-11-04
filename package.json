@@ -1,8 +1,21 @@
 {
   "name": "filter-predicates",
-  "version": "0.0.1",
-  "main": "index.js",
+  "version": "0.0.2",
+  "main": "dist/index.js",
+  "module": "dist/module.js",
+  "source": "src/index.ts",
+  "types": "dist/types.d.ts",
   "repository": "https://github.com/akp-tools/filter-predicates.git",
   "author": "Austin Peterson <austin@akpwebdesign.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "watch": "parcel watch",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "@parcel/packager-ts": "2.0.0-nightly.905",
+    "@parcel/transformer-typescript-types": "2.0.0-nightly.905",
+    "parcel": "^2.0.0-nightly.903",
+    "typescript": ">=3.0.0"
+  }
 }
