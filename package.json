@@ -1,0 +1,8 @@
+{
+  "name": "filter-predicates",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/akp-tools/filter-predicates.git",
+  "author": "Austin Peterson <austin@akpwebdesign.com>",
+  "license": "MIT"
+}
