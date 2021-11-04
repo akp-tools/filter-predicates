@@ -1,6 +1,6 @@
 {
   "name": "filter-predicates",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/index.js",
   "module": "dist/module.js",
   "source": "src/index.ts",
@@ -9,13 +9,21 @@
   "author": "Austin Peterson <austin@akpwebdesign.com>",
   "license": "MIT",
   "scripts": {
-    "watch": "parcel watch",
-    "build": "parcel build"
+    "build": "parcel build",
+    "clean": "rimraf .parcel-cache dist",
+    "deepclean": "yarn clean && rimraf node_modules && yarn",
+    "prepublishOnly": "yarn clean && yarn build && yarn test",
+    "test": "jest",
+    "watch": "parcel watch"
   },
   "devDependencies": {
     "@parcel/packager-ts": "2.0.0-nightly.905",
     "@parcel/transformer-typescript-types": "2.0.0-nightly.905",
+    "@types/jest": "^27.0.2",
+    "jest": "^27.3.1",
     "parcel": "^2.0.0-nightly.903",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.0.7",
     "typescript": ">=3.0.0"
   }
 }

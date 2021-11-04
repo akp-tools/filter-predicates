@@ -9,15 +9,19 @@ A collection of useful functions to throw into `Array.filter()`.
 ## What's available?
 
 ```javascript
-import { filterFalsy, filterTruthy, filterNull } from "filter-predicates";
+import { filterFalsy, filterNull, filterNaN, filterTruthy, filterUndefined } from "filter-predicates";
 
-const arr = [true, false, 1, 0, null, "string"];
+const testArray = [true, false, 1, 0, -1, null, undefined, NaN];
 
-arr.filter(filterFalsy); // [true, 1, "string"]
+testArray.filter(filterFalsy); // [true, 1, -1]
 
-arr.filter(filterTruthy); // [false, 0, null]
+testArray.filter(filterNull); // [true, false, 1, 0, -1, undefined, NaN]
 
-arr.filter(filterNull); // [true, false, 1, 0, "string"]
+testArray.filter(filterNaN); // [true, false, 1, 0, -1, null, undefined]
+
+testArray.filter(filterTruthy); // [false, 0, null, undefined, NaN]
+
+testArray.filter(filterUndefined); // [true, false, 1, 0, -1, null, NaN]
 ```
 
 ## But why though?

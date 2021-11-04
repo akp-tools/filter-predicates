@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "lib": ["ESNext"],
+    "esModuleInterop": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+  },
+  "include": ["src/**/*.ts"]
+}
