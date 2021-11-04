@@ -1,6 +1,6 @@
 {
   "name": "filter-predicates",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/index.js",
   "module": "dist/module.js",
   "source": "src/index.ts",
